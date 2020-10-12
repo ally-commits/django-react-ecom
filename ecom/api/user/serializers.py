@@ -4,7 +4,7 @@ from rest_framework.decorators import authentication_classes, permission_classes
 
 from .models import CustomUser
 
-class UserSerailizers(serializers.hyperlinkedModalSerializer):
+class UserSerializers(serializers.HyperlinkedModelSerializer):
 
     def create(self, validated_data):
         password = validated_data.pop('password',None)
